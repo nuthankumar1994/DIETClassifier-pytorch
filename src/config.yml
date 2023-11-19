@@ -1,6 +1,6 @@
 model:
-  model: latest_model
-  tokenizer: latest_model
+  model: dslim/bert-base-NER
+  tokenizer: dslim/bert-base-NER
   dataset_folder: dataset
   exclude_file: null
   entities:
