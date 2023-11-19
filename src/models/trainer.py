@@ -65,7 +65,7 @@ if __name__ == '__main__':
     from transformers import AutoTokenizer
 
     device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
-
+    print(device)
     files = ["dataset/nlu_QnA_converted.yml", "dataset/nlu_QnA_converted.yml"]
     tokenizer = AutoTokenizer.from_pretrained("dslim/bert-base-NER")
 
