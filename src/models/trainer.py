@@ -73,16 +73,16 @@ if __name__ == '__main__':
     entities_list = [entity for entity in entities_list if entity != "number"]
     print(f"ENTITIES_LIST: {entities_list}")
     dataset = DIETClassifierDataset(dataframe=df, tokenizer=tokenizer, entities=entities_list, intents=intents_list)
-
+    print('dataset obtained')
     config = DIETClassifierConfig(model="dslim/bert-base-NER", entities=entities_list, intents=intents_list)
     model = DIETClassifier(config=config)
+    print('came to model')
+    # sentences = ["What if I'm late"]
 
-    sentences = ["What if I'm late"]
+    # inputs = tokenizer(sentences, return_tensors="pt", padding="max_length", max_length=512)
 
-    inputs = tokenizer(sentences, return_tensors="pt", padding="max_length", max_length=512)
-
-    outputs = model(**{k: v for k, v in inputs.items()})
+    # outputs = model(**{k: v for k, v in inputs.items()})
 
     trainer = DIETTrainer(model=model, dataset=dataset, train_range=0.95)
-
+    
     trainer.train()
