@@ -46,7 +46,7 @@ class DIETTrainer:
             args=self.training_args,
             train_dataset=train_dataset,
             eval_dataset=eval_dataset,
-            callbacks=[EarlyStoppingCallback(early_stopping_patience=early_stopping_patience, early_stopping_threshold=early_stopping_threshold), TensorBoardCallback()]
+            callbacks=[EarlyStoppingCallback(early_stopping_patience=early_stopping_patience, early_stopping_threshold=early_stopping_threshold)]
         )
 
     def train(self):
