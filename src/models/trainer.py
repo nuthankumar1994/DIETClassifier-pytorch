@@ -29,6 +29,7 @@ class DIETTrainer:
                                                per_device_train_batch_size=per_device_train_batch_size,
                                                per_device_eval_batch_size=per_device_eval_batch_size,
                                                warmup_steps=warmup_steps,
+                                               save_strategy="epoch",
                                                weight_decay=weight_decay,
                                                logging_dir=logging_dir,
                                                load_best_model_at_end=True,
