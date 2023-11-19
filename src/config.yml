@@ -4,6 +4,7 @@ model:
   dataset_folder: dataset
   exclude_file: null
   entities:
+  
   - working_type
   - shift_type
   intents:
